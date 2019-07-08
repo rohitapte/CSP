@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Constraint Satisfaction Problems</h3>
+  <div style="text-align: justify">
+    <p align="left">Constraint Satisfaction problems (CSPs) are mathematical questions defined as a set of objects whose state must satisfy a number of constraints or limitations. CSPs represent the entities in a problem as a homogeneous collection of finite constraints over variables, which is solved by constraint satisfaction methods. CSPs are the subject of intense research in both artificial intelligence and operations research, since the regularity in their formulation provides a common basis to analyze and solve problems of many seemingly unrelated families. CSPs often exhibit high complexity, requiring a combination of heuristics and combinatorial search methods to be solved in a reasonable time. The <a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem">Boolean satisfiability problem</a> (SAT), the <a href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories">satisfiability modulo theories</a> (SMT) and <a href="https://en.wikipedia.org/wiki/Answer_set_programming">answer set programming</a> (ASP) can be roughly thought of as certain forms of the constraint satisfaction problem.</p>
+    <p align="left">Examples of simple problems that can be modeled as a CSP</p>
+  </div>
+  <div style="text-align: justify">
+    <ul>
+      <li><a href="nqueens">N-Queens</a></li>
+      <li><a href="sudoku">Sudoku</a></li>
+      <li><a href="mapcoloring">Map Coloring</a></li>
+    </ul>
+  </div>
+  <hr>
+  <div style="text-align: justify">
+    <p align="left">Once we define a CSP we can either use brute force to find a solution (not recommended for large search spaces) or use Backtracking search.</p>
+    <p align="left">Backtracking is a general algorithm for finding all solutions to CSPs, that incrementally builds candidates to the solutions, and abandons a candidate ("backtracks") as soon as it determines that the candidate cannot possibly be completed to a valid solution.</p>
+    <p align="left">Backtracking has variants that improve efficiency by adding heuristics</p>
+    <ul>
+      <li>Most constrained Value (MCV) - choose variables in your search tree with the smallest number of remaining values in its domain.</li>
+      <li>Arc Consistency (AC-3) - look ahead to forsee the effects of choosing a branching variable in your search tree to evaluate one of its valies.</li>
+    </ul>
+  </div>
+  <hr>
+  <div style="text-align: justify">
+    <p align="left">This site is a playground for setting up and solving CSPs. All the problems share common code for setting up the Constraint Satisfaction Problem, as well as the backtracking search algorithm (with MCV and AC-3).</p>
+    <p align="left">The only difference is in how the constraints are defined for each problem.</p>
+    <p align="left">This is from my <a href="https://github.com/rohitapte/cs221">homework assigmnents</a> for Stanford's CS221: Artificial Intelligence: Principles and Techniques (originally in Python, converted to Angular).</p>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/05529e16-92f0-4e69-a77a-7de43866a97f/resourceGroups/AirlineTracker/providers/Microsoft.Web/sites/ConstraintSatisfaction",
+    "appService.deploySubpath": ""
+}

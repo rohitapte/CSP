@@ -1,0 +1,14 @@
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.cell_dark{
+  background-color: rgb(128,128,128);
+  color:black;
+}
+.cell_white{
+  background-color: rgb(255,255,255);
+  color:black;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="controls">
+    <div class="preference">
+      <label>Enter size of grid (and queens)</label>
+      <input type="text" [(ngModel)]="numQueens" pattern="[0-9]*" size="2" maxlength="2">
+      <div class="divider"></div>
+      <button type="button" class="btn btn-success" (click)="solveNQueens()">Solve</button>
+    </div>
+  </div>
+  <hr>
+  <table class="queensGrid" cellspacing="2" cellpadding="0" border="1">
+          <tr *ngFor="let row of queensGrid; let i = index" border="1">
+            <td *ngFor="let item of row; let j = index"  [ngClass]="getTableClass(i,j)">
+              <img [src]="queensGrid[i][j]=='Q'?'queen.ico':'empty.ico'" height="51" width="51" class="center">
+            </td>
+          </tr>
+        </table>
+  <hr>
+  <div class="solutions">
+    <Label>{{status}}</Label>
+    <br>
+    <div *ngFor="let item of solutions; let i = index">
+      <label (click)="showSolution(i)" [ngStyle]="{'background-color': selectedIndex==i?'#FFFF00':'#FFFFFF'}" style="border: 2px solid black;border-radius: 8px;">{{item}}</label>
+      <br>
+    </div>
+  </div>
+</div>

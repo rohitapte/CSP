@@ -21,9 +21,12 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
+              "src/queen.ico",
+              "src/empty.ico",
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []

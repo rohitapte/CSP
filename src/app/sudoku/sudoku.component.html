@@ -1,0 +1,38 @@
+<div class="container">
+  <p>This is a demonstration of using CSPs to solve Sudoku. The backtracking algorithm finds <u>all</u> possible solutions. If you leave an open-ended grid, it will take a lot longer since there will be many solutions. For Sudoku problems, one solution is enough (early termination) but the backtracking search finds the optimal solution for problems and therefore we dont enable early termination.</p>
+  <hr>
+  <table class="sudoku_grid" cellspacing="2" cellpadding="0" >
+    <tr>
+      <td>
+        <table class="subgrid" cellspacing="2" cellpadding="0" >
+          <tr *ngFor="let row of sudokuGrid">
+            <td *ngFor="let item of row">
+              <input type="text" [(ngModel)]="item.gridValue" pattern="[0-9]*"size="1" maxlength="1" class={{item.gridClass}} [ngStyle]="{'font-weight':item.userInput? 'bold':'normal'}">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <div class="controls">
+    <button type="button" class="btn btn-primary" (click)="resetGrid()">Reset</button>
+    <div class="divider"></div>
+    <button type="button" class="btn btn-success" (click)="solveGrid()">Solve</button>
+    <br>
+    <p>{{ statusMessage }}</p>
+  </div>
+  <hr>
+  <div>Show me a puzzle</div>
+  <table class="sudoku_grid" cellspacing="2" cellpadding="0" >
+    <tr>
+      <td>
+        <div class="box" (click)="generateEasy()" style="background-color: #00CC0C;"><span class="tooltiptext">Easy</span></div>
+        <div class="box" (click)="generateMedium()" style="background-color: #FFFF00;"><span class="tooltiptext">Medium</span></div>
+        <div class="box" (click)="generateHard()" style="background-color: #FF9933;"><span class="tooltiptext">Hard</span></div>
+        <div class="box" (click)="generateEvil()" style="background-color: #FF0000;"><span class="tooltiptext">Evil</span></div>
+        <div class="box" (click)="generateToughest()" style="background-color: #000000;"><span class="tooltiptext">The Hardest Sudoku Puzzle</span></div>
+      </td>
+    </tr>
+  </table>
+</div>
